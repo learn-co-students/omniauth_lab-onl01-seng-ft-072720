@@ -8,8 +8,8 @@ r<p>We will put omniauth authentication data here (if present)</p>
   <pre>
     <%= session[:omniauth_data] %>
   </pre>
-<% else %>
+<%  else %>
   <p>No authentication information is available.</p>
   <p>Try <%= link_to 'Signing in with the developer strategy', '/auth/developer'%>.</p>
   <p>Try <%= link_to 'Signing in with the GitHub strategy', '/auth/github'%>.</p>
-<% end %>
+<%  end %>
