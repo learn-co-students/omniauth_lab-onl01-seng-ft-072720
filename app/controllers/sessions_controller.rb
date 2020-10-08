@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   # This is required because of a quirk the "developer" authentication
   # strategy. We'll remove this when we move to a "real" provider.
   skip_before_action :verify_authenticity_token, only: :create
-
+  
   def create
     # After entering a name and email value in the /auth/developer
     # path and submitting the form, you will see a pretty-print of
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     session[:omniauth_data] = request.env['omniauth.auth']
 
     # Ye olde redirect
-    # redirect_to root_path
-    redirect_to 'welcome/home'
+    redirect_to root_path
+    # redirect_to 'welcome/home'
   end
 end
